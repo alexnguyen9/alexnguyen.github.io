@@ -1,72 +1,26 @@
 ---
 layout: page
-title: My website
-subtitle: This is where I will tell my friends way too much about me
-use-site-title: true
+title: SPAMLab
+subtitle: Spatial Analysis And Modelling Lab
 ---
 
-<div class="posts-list">
-  {% for post in paginator.posts %}
-  <article class="post-preview">
-    <a href="{{ post.url | relative_url }}">
-	  <h2 class="post-title">{{ post.title }}</h2>
+The Spatial Analysis And Modelling Lab (SPAMLab) is hosted at the [Institute of Energy and Environment](http://www.iee.usp.br) of the [University of São Paulo](http://www.usp.br) (Brazil), and coordinated by [Prof. Carlos H. Grohmann](http://carlosgrohmann.com).  
 
-	  {% if post.subtitle %}
-	  <h3 class="post-subtitle">
-	    {{ post.subtitle }}
-	  </h3>
-	  {% endif %}
-    </a>
+Here we do all kinds of Spatial Analysis, including GIS, Remote Sensing and Digital Terrain Analysis.
 
-    <p class="post-meta">
-      Posted on {{ post.date | date: site.date_format }}
-    </p>
+Our current projects include: applications of UAVs (Unmanned Aerial Vehicles, or _drones_) and Terrestrial Laser Scanner (TLS, LiDAR) in characterizing features of geological or geomorphological interest, such as 3D modelling of caves, landslides, dune fields or geological structures in outcrops (dikes, fractures, faults etc); restoration of deforested areas and evaluation of hydroelectric power plants impact on the environment.   
 
-    <div class="post-entry-container">
-      {% if post.image %}
-      <div class="post-image">
-        <a href="{{ post.url | relative_url }}">
-          <img src="{{ post.image | relative_url }}">
-        </a>
-      </div>
-      {% endif %}
-      <div class="post-entry">
-        {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
-        {% assign excerpt_word_count = post.excerpt | number_of_words %}
-        {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
-          <a href="{{ post.url | relative_url }}" class="post-read-more">[Read&nbsp;More]</a>
-        {% endif %}
-      </div>
-    </div>
+See our projects pages and blog posts for more details on each activity.  
 
-    {% if post.tags.size > 0 %}
-    <div class="blog-tags">
-      Tags:
-      {% if site.link-tags %}
-      {% for tag in post.tags %}
-      <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
-      {% endfor %}
-      {% else %}
-        {{ post.tags | join: ", " }}
-      {% endif %}
-    </div>
-    {% endif %}
+Follow us on [Twitter](https://twitter.com/SPAM_Lab), [Instagram](https://www.instagram.com/spamlab.iee/), [YouTube](https://www.youtube.com/channel/UCWKii6esTHtTJ0jJcKeNdBQ) and [GitHub](https://github.com/spamlab).  
 
-   </article>
-  {% endfor %}
-</div>
+[///written.tech.reward](https://w3w.co/written.tech.reward)  
 
-{% if paginator.total_pages > 1 %}
-<ul class="pager main-pager">
-  {% if paginator.previous_page %}
-  <li class="previous">
-    <a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer Posts</a>
-  </li>
-  {% endif %}
-  {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ paginator.next_page_path | relative_url }}">Older Posts &rarr;</a>
-  </li>
-  {% endif %}
-</ul>
-{% endif %}
+<br><br>  
+
+#### SPAM?
+Well, what’ve you got?
+
+Well, there’s egg and bacon; egg sausage and bacon; egg and spam; egg bacon and spam; egg bacon sausage and spam; spam bacon sausage and spam; spam egg spam spam bacon and spam; spam sausage spam spam bacon spam tomato and spam;
+…spam spam spam egg and spam; spam spam spam spam spam spam baked beans spam spam spam…
+…or Lobster Thermidor au Crevette with a Mornay sauce served in a Provencale manner with shallots and aubergines garnished with truffle pate, brandy and with a fried egg on top and spam. [Spam - Monty Python's The Flying Circus](https://youtu.be/M_eYSuPKP3Y)
