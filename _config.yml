@@ -1,7 +1,7 @@
 # --- General options --- #
 
 # Name of website
-title: Alex's Website
+title: Alex Nguyen
 
 # Short description of your site
 description: A virtual proof that I'm awesome
@@ -70,8 +70,7 @@ social-network-links:
   rss: true
   email: "alextnguyen9@gmail.com"
   facebook: deanattali
-  github: daattali
-  twitter: daattali
+  github: alexnguyen9
 #  reddit: yourname
 #  linkedin: daattali
 #  xing: yourname
@@ -87,9 +86,9 @@ social-network-links:
 
 # Select which share links to show in posts
 share-links-active:
-  twitter: true
-  facebook: true
-  linkedin: true
+  twitter: false
+  facebook: false
+  linkedin: false
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
