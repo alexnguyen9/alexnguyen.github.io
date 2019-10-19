@@ -9,17 +9,22 @@ subtitle: Intersection Between Data Science and Video Games
 
 Within the popular game League of Legends, there is a game mode called ARAM (All Random All Middle). There are two teams with 5 players each, where all the players are given a randomly character from a set of 145 (as of patch 9.20) champions.  The team spawning at the bottom nexus is often referred to as the "blue" team and the team at the top nexus is referred as the "red" team.  The setting of the map takes place in bridge where all the players duke it out all at once. 
 
-![GitHub Logo](/img/aram.jpg  | width=100)
+![GitHub Logo](/img/aram.jpg)
 
-![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png | width=100)
 
 Lately I haven't been playing the regular summoner's rift match in League of Legends, rather opting for the ARAM map since it's faster and doesn't involve that much time investment.  Personally I find much more fun when you're constantly team battling instead of laning boringly for the 15 minutes summoners' rift. 
 
-Of course since the characters are randomly chosen for each character, that got me thinking if you could predict which team would win given the team compositions of both teams.
+Of course since the characters are randomly chosen for each character, that got me thinking if you could predict which team would win given the team compositions of both teams.  I played a decent of games so I had a hunch on what teams I could win with and those I probably couldn't. But I wanted to test my own intuition vs what a machine learning model would think. 
 
+### Where to get the data
+
+This was an opportunity for me to work with Riot's (the company that developed the game) API. I utilized the 
+[Cassiopeia](https://github.com/meraki-analytics/cassiopeia) library in Python to expedite the data extraction process. I really recommend any interested in utilizing the Riot API to use it, it makes the data extraction process so much more easy.  I couldn't find an easy way to extract all ARAM games, so I utilized a random search method to extract random games starting with a seed account (my account).  The API crawler then scans through my games and goes on to the next random player within my games.  I extracted about 100,000 ARAM games from patch 9.19 (the most recent patch) which took about 2 days.
 
 ### Design
 
-First I thought about how I was going to design a data matrix, how to account for 2 teams, and the 135 champions.  If we let a single row represent a single match, we can define 135 columns as the features, reresenting each of the 135 champions, then each of the champions in the blue team will be marked as "+1" and the champions will be marked as a "-1", while all the other unpicked champions are left as "0"
+First I thought about how I was going to design a data matrix, how to account for 2 teams, and the 135 champions.  If we let a single row represent a single match, we can define 135 columns as the features, reresenting each of the 135 champions, then each of the champions in the blue team will be marked as "+1" and the champions will be marked as a "-1", while all the other unpicked champions are left as "0".  Then the target can be a binary variable indicated whether the blue team won or loss. 
 
 ### Algorithm
+
+For this project I used sklearn's logistic regression.  
