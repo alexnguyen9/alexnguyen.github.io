@@ -1,10 +1,10 @@
 ---
 layout: page
-title: About me ?????
-subtitle: HEllo??
+title: About Me!
+subtitle: Math & Stats
 ---
 
-Hello! Thanks for checking out my personal site.  I am currently a graduate student at the California State University, Long Beach where I study statistics. 
+Hey! Thanks for checking out my personal site.  I'm Alex and I'm a graduate student at Cal State Long Beach where I study statistics!  This hosts my projects that I've done throughout my time at school.
 
 ### my history
 
