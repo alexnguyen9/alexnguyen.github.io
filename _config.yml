@@ -25,7 +25,7 @@ navbar-links:
     - LoL ARAM Match Predictor: "project/lolaram"
     - Recipe Matcher: "project/recipematcher"
     - Plankton Classification: "project/plankton"
-   Resume:
+   Resume: "resume"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
