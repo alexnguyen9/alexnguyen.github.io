@@ -29,6 +29,6 @@ First I thought about how I was going to design a data matrix, how to account fo
 
 For this project, I thought that utilizing logistic regression provides a highly interpretable model.  The coefficients associated with each champion gives a score on well they perform in ARAM games.  Thus the strength of a team's composition will be the sum of the 5 champion scores given by their coefficients.
 
- $h_\theta(x) = \Large\frac{1}{1 + \mathcal{e}^{(-\theta^\top x)}}$
+ $$h_\theta(x) = \Large\frac{1}{1 + \mathcal{e}^{(-\theta^\top x)}}$$
 
 If the the champions on both sides are similar in scores, the log odds of p will be close to zero, thus p will be around 50% which is what we want.  Both teams having similar score estimates mean no side has a strong edge.
