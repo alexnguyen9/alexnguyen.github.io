@@ -23,7 +23,7 @@ This was an opportunity for me to work with Riot's (the company that developed t
 
 ### Design
 
-First I thought about how I was going to design a data matrix, how to account for 2 teams, and the 135 champions.  If we let a single row represent a single match, we can define 135 columns as the features, reresenting each of the 135 champions, then each of the champions in the blue team will be marked as "+1" and the champions will be marked as a "-1", while all the other unpicked champions are left as "0".  Then the target can be a binary variable indicated whether the blue team won or loss. 
+I thought about how I was going to design a data matrix, and how to account for 2 teams and the 145 champions.  If we let a single row represent a single match, we can define 145 columns as the features, reresenting each of the 145 champions, then each of the champions in the blue team will be marked as "+1" and the champions will be marked as a "-1", while all the other unpicked champions are left as "0".  The target can be a binary variable indicated whether the blue team won or loss. 
 
 Thus for match $i$ the associated data vector is given by: 
 
@@ -40,9 +40,9 @@ Thus from vector $X_{i,j}$ we want to predict $Y_i$ which is 1 if the blue team 
 
 ### Algorithm
 
-For this project, I thought that utilizing logistic regression provides a highly interpretable model.
+For this project, I implemented the logistic regression algorithm given that this was a classification problem.  The for a particular match $i$, the relationship between the target and the features (the champion columns) is given by:
 
-$$ \log(\frac{p}{1-p}) = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + ... \beta_{145} X_{145} $$
+$$ \log(\frac{p_i}{1-p_i}) = \beta_0 + \beta_1 X_{i,1} + \beta_2 X_{i,2} + ... \beta_{145} X_{i,145} $$
 
 Since the target is whether the blue team will win, $p$ is the probability of the blue team winning.  The coefficients associated with each champion has a natural interpretation of a score on well they perform in ARAM games.
 
