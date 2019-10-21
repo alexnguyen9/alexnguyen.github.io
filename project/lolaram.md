@@ -27,10 +27,10 @@ First I thought about how I was going to design a data matrix, how to account fo
 
 Thus for match $i$ the associated data vector is given by: X_{i,j} =
 
- \begin{cases} 
-      \frac{2\pi + \theta_d}{4\pi^2} & -2\pi < \theta_d \leq 0 \\
-      \frac{2\pi-\theta_d}{4\pi^2} & 0 < \theta_d \leq 2\pi \\
-   \end{cases}
+\begin{cases}
+    \frac{x^2-x}{x},& \text{if } x\geq 1\\
+    0,              & \text{otherwise}
+\end{cases}
 
 ### Algorithm
 
