@@ -12,14 +12,14 @@ Within the popular game League of Legends, there is a game mode called ARAM (All
 ![GitHub Logo](/img/aram.jpg)
 
 
-Lately I haven't been playing the regular summoner's rift match in League of Legends, rather opting for the ARAM map since it's faster and doesn't involve that much time investment.  Personally I find much more fun when you're constantly team battling instead of laning boringly for the 15 minutes summoners' rift. 
+Lately I haven't been playing the regular summoner's rift match in League of Legends, rather opting for the ARAM map since it's faster and doesn't involve that much time investment.  Personally I find it much more fun when you're constantly in team battles compared to the more methodic regular mode. 
 
-Of course since the characters are randomly chosen for each character, that got me thinking if you could predict which team would win given the team compositions of both teams.  I played a decent of games so I had a hunch on what teams I could win with and those I probably couldn't. But I wanted to test my own intuition vs what a machine learning model would think. 
+Since the characters are randomly chosen for each character, that got me thinking if you could predict which team would win given the team compositions of both teams.  I played a decent of games so I had an idea on what teams I could win with and those I probably couldn't. But I wanted to test my own intuition vs what a machine learning model would think. 
 
 ### Where to get the data
 
 This was an opportunity for me to work with Riot's (the company that developed the game) API. I utilized the 
-[Cassiopeia](https://github.com/meraki-analytics/cassiopeia) library in Python to expedite the data extraction process. I really recommend any interested in utilizing the Riot API to use it, it makes the data extraction process so much more easy.  I couldn't find an easy way to extract all ARAM games, so I utilized a random search method to extract random games starting with a seed account (my account).  The API crawler then scans through my games and goes on to the next random player within my games.  I extracted about 100,000 ARAM games from patch 9.19 (the most recent patch) which took about 2 days.
+[Cassiopeia](https://github.com/meraki-analytics/cassiopeia) library in Python to expedite the data extraction process. I really recommend anyone interested in using the Riot API to use package, it makes the data extraction process so much more easy.  I couldn't find an easy way to extract all ARAM games, so I utilized a random search method to extract random games starting with a seed account (my account).  The API crawler then scans through my games and goes on to the next random player within my games.  I extracted about 100,000 ARAM games from patch 9.19 (the most recent patch) which took about 2 days.
 
 ### Design
 
@@ -44,12 +44,12 @@ For this project, I implemented the logistic regression algorithm given that thi
 
 $$ \log(\frac{p_i}{1-p_i}) = \beta_0 + \beta_1 X_{i,1} + \beta_2 X_{i,2} + ... \beta_{145} X_{i,145} $$
 
-Since the target is whether the blue team will win, $p$ is the probability of the blue team winning.  The coefficients associated with each champion has a natural interpretation of a score on well they perform in ARAM games.
+Since the target is whether the blue team will win, $p$ is the probability of the blue team winning.  The coefficients associated with each champion has a natural interpretation of a score on well they perform in ARAM games, and the sign has the interpretation on whether it adds to the blue's teams chances or the red's team chances.
 
 For example if champion 1 is in the blue team it will contribute $+\beta_1$ to the log odds of $p$ since its adding to the chances of blue team winning, while if it's on the red team it will contribute $-\beta_1$ to the log odds of $p$. Thus the strength of a team's composition will be the sum of the 5 champion scores given by their coefficient we can rewrite the equation as:
 
-$$ \log(\frac{p}{1-p}) = \beta_0 + (\text{sum of champion scores from blue team}) - (\text{sum of champion scores from blue team})  $$
+$$ \log(\frac{p_i}{1-p_i}) = \beta_0 + (\text{sum of champion scores from blue team}) - (\text{sum of champion scores from blue team})  $$
 
-If the sum in the right hand side is large and greater than zero, this means the blue has a higher probability of winning and vice versa.
+If the sum in the right hand side is large and greater than zero, this means the blue has a higher probability of winning and vice versa.  Interestingly when I
 
 
