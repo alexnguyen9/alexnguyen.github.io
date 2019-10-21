@@ -32,6 +32,11 @@ Thus for match $i$ the associated data vector is given by: X_{i,j} =
     0,              & \text{otherwise}
 \end{cases}
 
+\begin{cases}
+    \frac{x^2-x}{x},& \text{if } x\geq 1\\
+    0,              & \text{otherwise}
+\end{cases}
+
 ### Algorithm
 
 For this project, I thought that utilizing logistic regression provides a highly interpretable model.
