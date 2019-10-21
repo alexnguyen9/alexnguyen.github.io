@@ -10,7 +10,7 @@ This was a project I did for school using data from [kaggle](https://www.kaggle.
 
 ![Various Plankton](/img/plankton.png)
 
-This was one of my first forays into using neural networks, specifically utilizing neural networks.  This project was done primary using the Pytorch package to build the neural networks.  I build various neural networks of various depths to see how accuracy varied with depth.  I also utilized data augmentation; using various transforms on the images to artificially inflate the training set and improve accuracy.
+This was one of my first forays into using neural networks, specifically utilizing convolutional neural networks.  This project was done primary using the Pytorch package to build the neural networks.  I build various neural networks of various depths to see how accuracy varied with depth.  I also utilized data augmentation; using various transforms on the images to artificially inflate the training set and improve accuracy.
 
 More details can be found in my report that I did <a href="alexnguyen9.github.io/misc/Final Project 495.pdf" target="_blank">here.</a>
 
