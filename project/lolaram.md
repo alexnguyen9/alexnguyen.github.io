@@ -25,13 +25,22 @@ This was an opportunity for me to work with Riot's (the company that developed t
 
 First I thought about how I was going to design a data matrix, how to account for 2 teams, and the 135 champions.  If we let a single row represent a single match, we can define 135 columns as the features, reresenting each of the 135 champions, then each of the champions in the blue team will be marked as "+1" and the champions will be marked as a "-1", while all the other unpicked champions are left as "0".  Then the target can be a binary variable indicated whether the blue team won or loss. 
 
+Thus for match $i$ the associated data vector is given by: X_{i,j} =
+
+ \begin{cases} 
+      \frac{2\pi + \theta_d}{4\pi^2} & -2\pi < \theta_d \leq 0 \\
+      \frac{2\pi-\theta_d}{4\pi^2} & 0 < \theta_d \leq 2\pi \\
+   \end{cases}
+
 ### Algorithm
 
 For this project, I thought that utilizing logistic regression provides a highly interpretable model.
 
 $$ \log(\frac{p}{1-p}) = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + ... \beta_{145} X_{145} $$
 
-Since the target is whether the blue team will win, $p$ is the probability of the blue team winning.  The coefficients associated with each champion has a natural interpretation of a score on well they perform in ARAM games. For example if champion 1 is in the blue team it will contribute $+\beta_1$ to the log odds of $p$, while if it's on the red team it will contribute $-\beta_1$ to the log odds of $p$. Thus the strength of a team's composition will be the sum of the 5 champion scores given by their coefficient we can rewrite the equation as:
+Since the target is whether the blue team will win, $p$ is the probability of the blue team winning.  The coefficients associated with each champion has a natural interpretation of a score on well they perform in ARAM games.
+
+For example if champion 1 is in the blue team it will contribute $+\beta_1$ to the log odds of $p$ since its adding to the chances of blue team winning, while if it's on the red team it will contribute $-\beta_1$ to the log odds of $p$. Thus the strength of a team's composition will be the sum of the 5 champion scores given by their coefficient we can rewrite the equation as:
 
 $$ \log(\frac{p}{1-p}) = \beta_0 + (\text{sum of champion scores from blue team}) - (\text{sum of champion scores from blue team})  $$
 
