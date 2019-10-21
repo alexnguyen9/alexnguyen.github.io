@@ -27,10 +27,14 @@ First I thought about how I was going to design a data matrix, how to account fo
 
 ### Algorithm
 
-For this project, I thought that utilizing logistic regression provides a highly interpretable model.  The coefficients associated with each champion gives a score on well they perform in ARAM games.  Thus the strength of a team's composition will be the sum of the 5 champion scores given by their coefficients.
+For this project, I thought that utilizing logistic regression provides a highly interpretable model.
 
- $$h_\theta(x) = \Large\frac{1}{1 + \mathcal{e}^{(-\theta^\top x)}}$$
- 
- $$ \log(frac{p}{1-p}) = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + ...  \beta_145 X_145 $$
+$$ \log(\frac{p}{1-p}) = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + ... \beta_{145} X_{145} $$
 
-If the the champions on both sides are similar in scores, the log odds of p will be close to zero, thus p will be around 50% which is what we want.  Both teams having similar score estimates mean no side has a strong edge.
+Since the target is whether the blue team will win, $p$ is the probability of the blue team winning.  The coefficients associated with each champion has a natural interpretation of a score on well they perform in ARAM games. For example if champion 1 is in the blue team it will contribute $+\beta_1$ to the log odds of $p$, while if it's on the red team it will contribute $-\beta_1$ to the log odds of $p$. Thus the strength of a team's composition will be the sum of the 5 champion scores given by their coefficient we can rewrite the equation as:
+
+$$ \log(\frac{p}{1-p}) = \beta_0 + (\text{sum of champion scores from blue team}) - (\text{sum of champion scores from blue team})  $$
+
+If the sum in the right hand side is large and greater than zero, this means the blue has a higher probability of winning and vice versa.
+
+
