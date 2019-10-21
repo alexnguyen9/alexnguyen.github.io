@@ -25,13 +25,13 @@ This was an opportunity for me to work with Riot's (the company that developed t
 
 First I thought about how I was going to design a data matrix, how to account for 2 teams, and the 135 champions.  If we let a single row represent a single match, we can define 135 columns as the features, reresenting each of the 135 champions, then each of the champions in the blue team will be marked as "+1" and the champions will be marked as a "-1", while all the other unpicked champions are left as "0".  Then the target can be a binary variable indicated whether the blue team won or loss. 
 
-Thus for match $i$ the associated data vector is given by: X_{i,j} =
-
+Thus for match $i$ the associated data vector is given by: $X_{i,j}$ =
+$$
 \begin{cases}
 n/2,  & \text{if $n$ is even} \\
 3n+1, & \text{if $n$ is odd}
 \end{cases}
-
+$$
 
 ### Algorithm
 
