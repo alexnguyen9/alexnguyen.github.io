@@ -27,7 +27,7 @@ First I thought about how I was going to design a data matrix, how to account fo
 
 Thus for match $i$ the associated data vector is given by: 
 
-$$X_{i,j}$ =
+$$X_{i,j} =
 
 \begin{cases}
 +1,  & \text{if champion $j$ is in the blue team} \\
@@ -35,6 +35,8 @@ $$X_{i,j}$ =
 0,   & \text{if champion $j$ is not chosen on either team}
 \end{cases}
 $$
+
+Thus from vector $X_{i,j}$ we want to predict $Y_i$ which is 1 if the blue team won the match and 0 otherwise. 
 
 ### Algorithm
 
