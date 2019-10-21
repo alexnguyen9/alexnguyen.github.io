@@ -31,6 +31,6 @@ For this project, I thought that utilizing logistic regression provides a highly
 
  $$h_\theta(x) = \Large\frac{1}{1 + \mathcal{e}^{(-\theta^\top x)}}$$
  
- $$ \log(frac{p}{1-p}) = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + ...  \beta_145 X_145
+ $$ \log(frac{p}{1-p}) = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + ...  \beta_145 X_145 $$
 
 If the the champions on both sides are similar in scores, the log odds of p will be close to zero, thus p will be around 50% which is what we want.  Both teams having similar score estimates mean no side has a strong edge.
