@@ -28,14 +28,10 @@ First I thought about how I was going to design a data matrix, how to account fo
 Thus for match $i$ the associated data vector is given by: X_{i,j} =
 
 \begin{cases}
-    \frac{x^2-x}{x},& \text{if } x\geq 1\\
-    0,              & \text{otherwise}
+n/2,  & \text{if $n$ is even} \\
+3n+1, & \text{if $n$ is odd}
 \end{cases}
 
-\begin{cases}
-    \frac{x^2-x}{x},& \text{if } x\geq 1\\
-    0,              & \text{otherwise}
-\end{cases}
 
 ### Algorithm
 
