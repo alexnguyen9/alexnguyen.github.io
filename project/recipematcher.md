@@ -36,7 +36,7 @@ Using the recipe matrix above, two recipes represented by $X_A$ and $X_B$ share 
 
 The jaccard index should an appropriate measure of similarity because it of course measures the number of shared ingredients but also at the same time controls for the sizes of the 2 recipes.
 
-For example if a recipe A, recipe B, and recipe C all share 2 ingredients, but recipe A contains 3 ingredients, recipe B contains 4 ingredients, and recipe 10 contains 10 ingredients.  I think it's intuitive to say that recipe A is closer to recipe B than it is to recipe C since the proprtion of shared ingredients to the total number of ingredients is much larger.
+For example if a recipe A, recipe B, and recipe C all share 2 ingredients, but recipe A contains 3 ingredients, recipe B contains 4 ingredients, and recipe 10 contains 10 ingredients.  I think it's intuitive to say that recipe A is closer to recipe B than it is to recipe C since the proprtion of shared ingredients to the total number of ingredients is much larger between A & B compared to A & C.
 
 #### Parsing through the data
 
