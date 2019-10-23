@@ -4,6 +4,7 @@ title: League Of Legends ARAM Match Predictor
 subtitle: Intersection Between Data Science and Video Games 
 ---
 
+Check it out [here!](http://arampredict.pythonanywhere.com/)
 
 ### Background and Motivation
 
