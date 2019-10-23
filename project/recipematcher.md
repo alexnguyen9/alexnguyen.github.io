@@ -53,9 +53,14 @@ I looked at how other projects parsed through ingredients and saw that a most re
 
 [quantity] [unit] [ingredient] , [preparation instructions].
 
-So I went through the ingredients, I removed all quantity words, removed all measurement and size quantifying words, and removed everything after the first comma. Hopefully this should have removed most irrelevant terms.  I also found most text in parentheses were irrelevant to the ingredient as most were also preparation instructions or alternative measurements, so I also removed them.
+So I went through the ingredients, I removed:
+* all quantity words, removed all measurement and size quantifying words,
+* everything after the first comma 
+* everything within parentheses since they usually indicate preparation instructions or alternatives
+* puncuation
 
 
+Hopefully this should have removed most irrelevant terms
 I used the nltk package and lemmatized all the words, to make sure all the words were singular, ie. we want "onions" to "onion"
 
 To make sure we get only relevant ingredients, I utilized the nltk POS (part of speech) tagger to remove adverbs or verbs, and to keep only adjectives and nouns.
