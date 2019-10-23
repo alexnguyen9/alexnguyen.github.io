@@ -10,7 +10,7 @@ This was a project I did for school using data from [kaggle](https://www.kaggle.
 
 ![Various Plankton](/img/plankton.png)
 
-<img align="right" src="https://github.com/alexnguyen9/alexnguyen9.github.io/blob/master/img/plankton.png">
+<img align="right" src="https://raw.githubusercontent.com/alexnguyen9/alexnguyen9.github.io/master/img/plankton.png">
 
 This was one of my first forays into using neural networks, specifically utilizing convolutional neural networks.  This project was done primary using the Pytorch package to build the neural networks.  I build various neural networks of various depths to see how accuracy varied with depth.  I also utilized data augmentation; using various transforms on the images to artificially inflate the training set and improve accuracy.
 
