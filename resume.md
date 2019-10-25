@@ -4,4 +4,4 @@ description: NYU East Asian Studies Department, MA Thesis Defense
 
 ---
 
-<iframe src="https://docs.google.com/file/d/0B8aGkJVsdqiJamVpUnJ1TDlFbFU/preview" width="700" height="700" align="right"></iframe>
+<iframe src="https://drive.google.com/file/d/16vLS-PKi3UPc5-7dwu99lo0wY27xqCfM/preview" width="640" height="480" align="middle"></iframe>
