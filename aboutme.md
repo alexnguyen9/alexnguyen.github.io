@@ -9,7 +9,3 @@ Hey! Thanks for checking out my personal site.  I'm Alex and I'm a graduate stud
 This site various projects that I've done in the past.
 
 Questions? Concerns? Say Hello? Send anything and everything at my email: [alextnguyen9@gmail.com](mailto:alextnguyen9@gmail.com?subject=[GitHub]%20Source%20Han%20Sans)
-
-
-
-
