@@ -1,26 +1,11 @@
 ---
 layout: page
-title: SPAMLab
-subtitle: Spatial Analysis And Modelling Lab
+title: About Me!
+subtitle: Finding my place in the world
 ---
 
-The Spatial Analysis And Modelling Lab (SPAMLab) is hosted at the [Institute of Energy and Environment](http://www.iee.usp.br) of the [University of São Paulo](http://www.usp.br) (Brazil), and coordinated by [Prof. Carlos H. Grohmann](http://carlosgrohmann.com).  
+Hey! Thanks for checking out my personal site.  I'm Alex and I'm a graduate student at Cal State Long Beach where I study statistics and aspire to become a data scientist.  In the the past I've had the opportunity to work a variety of data, ranging from bus accident data from my time at Long Beach Transit, to working with massive amounts of healthcare data from my time at Strata Decision Technology.  I've developed a strong background in statistics (been doing for undergrad and still going!), as well as really honing my programming skills (both in Python and R) within the last couple years).
 
-Here we do all kinds of Spatial Analysis, including GIS, Remote Sensing and Digital Terrain Analysis.
+This site various projects that I've done in the past.
 
-Our current projects include: applications of UAVs (Unmanned Aerial Vehicles, or _drones_) and Terrestrial Laser Scanner (TLS, LiDAR) in characterizing features of geological or geomorphological interest, such as 3D modelling of caves, landslides, dune fields or geological structures in outcrops (dikes, fractures, faults etc); restoration of deforested areas and evaluation of hydroelectric power plants impact on the environment.   
-
-See our projects pages and blog posts for more details on each activity.  
-
-Follow us on [Twitter](https://twitter.com/SPAM_Lab), [Instagram](https://www.instagram.com/spamlab.iee/), [YouTube](https://www.youtube.com/channel/UCWKii6esTHtTJ0jJcKeNdBQ) and [GitHub](https://github.com/spamlab).  
-
-[///written.tech.reward](https://w3w.co/written.tech.reward)  
-
-<br><br>  
-
-#### SPAM?
-Well, what’ve you got?
-
-Well, there’s egg and bacon; egg sausage and bacon; egg and spam; egg bacon and spam; egg bacon sausage and spam; spam bacon sausage and spam; spam egg spam spam bacon and spam; spam sausage spam spam bacon spam tomato and spam;
-…spam spam spam egg and spam; spam spam spam spam spam spam baked beans spam spam spam…
-…or Lobster Thermidor au Crevette with a Mornay sauce served in a Provencale manner with shallots and aubergines garnished with truffle pate, brandy and with a fried egg on top and spam. [Spam - Monty Python's The Flying Circus](https://youtu.be/M_eYSuPKP3Y)
+Questions? Concerns? Say Hello? Send anything and everything at my email: [alextnguyen9@gmail.com](mailto:alextnguyen9@gmail.com?subject=[GitHub]%20Source%20Han%20Sans)
