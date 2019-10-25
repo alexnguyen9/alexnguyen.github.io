@@ -3,6 +3,7 @@ title: "Resume"
 
 ---
 
+Below is a preview of my resume, but you can also download it [here] :)
 
+<iframe src="https://drive.google.com/file/d/1tqBbRoGXFvMSORe9KM6OjWs_gr5nwzH-/preview" width="740" height="520" align="middle"></iframe>
 
-<iframe src="https://drive.google.com/file/d/16vLS-PKi3UPc5-7dwu99lo0wY27xqCfM/preview" width="720" height="480" align="middle"></iframe>
