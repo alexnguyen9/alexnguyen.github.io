@@ -26,7 +26,12 @@ This was an opportunity for me to work with Riot's (the company that developed t
 
 I thought about how I was going to design a data matrix, and how to account for 2 teams and the 145 champions.  If we let a single row represent a single match, we can define 145 columns as the features, reresenting each of the 145 champions, then each of the champions in the blue team will be marked as "+1" and the champions will be marked as a "-1", while all the other unpicked champions are left as "0".  The target can be a binary variable indicated whether the blue team won or loss. 
 
-Thus for match $i$ the associated data vector is given by: 
+For example we want to turn the following match into a sparse vector
+
+$$ \text{Red Team:["Annie", "Ahri", "Zed","Ashe","Ryze"] & Blue Team:["Nasus","Vayne","Kayle","Zyra","Galio"]} \rightarrow \begin{bmatrix} 0 & 0 & ... & 0 & 0\end{bmatrix} $$
+
+
+For match $i$ the associated data vector is given by: 
 
 $$X_{i,j} =
 
@@ -37,7 +42,7 @@ $$X_{i,j} =
 \end{cases}
 $$
 
-Thus from vector $X_{i,j}$ we want to predict $Y_i$ which is 1 if the blue team won the match and 0 otherwise. 
+From the champion and match matrix $X_{i,j}$ we want to predict $Y_i$ which is 1 if the blue team won the match and 0 otherwise. 
 
 ### Algorithm
 
@@ -45,12 +50,13 @@ For this project, I implemented the logistic regression algorithm given that thi
 
 $$ \log(\frac{p_i}{1-p_i}) = \beta_0 + \beta_1 X_{i,1} + \beta_2 X_{i,2} + ... \beta_{145} X_{i,145} $$
 
-Since the target is whether the blue team will win, $p$ is the probability of the blue team winning.  The coefficients associated with each champion has a natural interpretation of a score on well they perform in ARAM games, and the sign has the interpretation on whether it adds to the blue's teams chances or the red's team chances.
+Since the target is whether the blue team will win, $p$ is the probability of the blue team winning.  The coefficients associated with each champion ($\beta_j \text{for champion $j$}$) has a natural interpretation of a score on well they perform in ARAM games, and the sign has the interpretation on whether it adds to the blue's teams chances or the red's team chances. 
 
 For example if champion 1 is in the blue team it will contribute $+\beta_1$ to the log odds of $p$ since its adding to the chances of blue team winning, while if it's on the red team it will contribute $-\beta_1$ to the log odds of $p$. Thus the strength of a team's composition will be the sum of the 5 champion scores given by their coefficient we can rewrite the equation as:
 
 $$ \log(\frac{p_i}{1-p_i}) = \beta_0 + (\text{sum of champion scores from blue team}) - (\text{sum of champion scores from blue team})  $$
 
-If the sum in the right hand side is large and greater than zero, this means the blue has a higher probability of winning and vice versa.  Interestingly when I
+If the sum in the right hand side is large and greater than zero, this means the blue has a higher probability of winning and vice versa. 
 
+What about $\beta_0$?  There is no champion indicator $X_i$ associated with it.  Interestingly when I initially set the same set of champions vs themselves, I expected that the resulting probability should have 50%, because it's essentially a mirror match and each team should have an equal probability of winning, but I got a probability greater than 50%.  I was puzzled at first then I realized that that there is a bias parameter associated within the logistic regression that is turned on by default.  $\beta_0$ is the bias towards the blue team winning. Since the game is not symmetrical in terms on player vision (blue team plays on bottom and red team plays on top), there is a natural (as in inherent in the game) tendency towards the blue team winning. 
 
