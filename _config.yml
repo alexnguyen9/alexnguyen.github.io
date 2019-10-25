@@ -21,6 +21,7 @@ description: A virtual proof that I'm awesome
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
+  Resume: "resume"
   Projects:
     - LoL ARAM Match Predictor: "project/lolaram"
     - Recipe Matcher: "project/recipematcher"
