@@ -52,7 +52,7 @@ $$ \log(\frac{p_i}{1-p_i}) = \beta_0 + \beta_1 X_{i,1} + \beta_2 X_{i,2} + ... \
 
 Since the target is whether the blue team will win, $p$ is the probability of the blue team winning.  The coefficients associated with each champion ($\beta_j \text{for champion $j$}$) has a natural interpretation of a score on well they perform in ARAM games, and the sign has the interpretation on whether it adds to the blue's teams chances or the red's team chances. 
 
-For example if champion 1 is in the blue team it will contribute $+\beta_1$ to the log odds of $p$ since its adding to the chances of blue team winning, while if it's on the red team it will contribute $-\beta_1$ to the log odds of $p$. Thus the strength of a team's composition will be the sum of the 5 champion scores given by their coefficient we can rewrite the equation as:
+For example if champion 1 is in the blue team it will contribute $+\beta_1$ to the log odds of $p$ since its adding to the chances of blue team winning, while if it's on the red team it will contribute $-\beta_1$ to the log odds of $p$. So champions with a high positive $\beta$ coefficient are stronger in ARAM, champions with coefficients close to 0 are average within the ranking of champions, and champions with large negative coefficents perform very bad in ARAM games.  Thus the strength of a team's composition will be the sum of the 5 champion scores given by their coefficient we can rewrite the equation as:
 
 $$ \log(\frac{p_i}{1-p_i}) = \beta_0 + (\text{sum of champion scores from blue team}) - (\text{sum of champion scores from blue team})  $$
 
