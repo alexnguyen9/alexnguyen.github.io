@@ -5,6 +5,7 @@ subtitle: Intersection Between Data Science and Video Games
 ---
 
 I deployed this project on pythonwhere.com, you can check it [here!](http://arampredict.pythonanywhere.com/).
+
 The code for this project can be found [here](https://github.com/alexnguyen9/aram-predict)
 
 ### Background and Motivation
