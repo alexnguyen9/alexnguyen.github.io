@@ -87,6 +87,6 @@ Finally I was left with a list of ingredients which I converted the list to a si
 A problem I came across was with dealing with compound words and adjectives.  For example take: baking soda.  It's comprised of two words, "baking" and "soda" each on their own has different meanings.  The count vectorizer would separate the two words as two seprate ingredients which I didn't think was appropriate since I another recipe containing pop soda could match with the "soda" part in baking soda.  So for certain ingredients like "sesame oil" and "soy milk" I combined them into a single word to make sure we captured the meaning of the ingredient.  For ingredients like "white onion,"  some recipes just called it "onions" while others made the color distinction between onions, so I just left them as two separate words.
 
 # Application
-Once we have a countvectorizer object, you can apply it to our input list of ingredients and vectorize all the recipes within the scraped database.  The used scipy's `cdist` function to find the cosine similarities and used numpy's `argsort` to find the most similar recipes.
+Once we have a countvectorizer object, you can apply it to our input list of ingredients and vectorize all the recipes within the scraped database.  I used scipy's `cdist` function to find the cosine similarities of our input string against each recipe in the database. Finally I used numpy's `argsort` to find the indexes of the recipes within the database that are most similar to our input string.
 
 
