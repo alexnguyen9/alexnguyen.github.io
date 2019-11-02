@@ -60,5 +60,10 @@ $$ \log(\frac{p_i}{1-p_i}) = \beta_0 + (\text{sum of champion scores from blue t
 
 If the sum in the right hand side is large and greater than zero, this means the blue has a higher probability of winning and vice versa. 
 
+Once we estimate the parameters $\beta's $, it's just a matter of algebra to find the probability of the blue side winning, $p_i$ (which is just (1 - probability of red team winning)
+
 What about $\beta_0$?  There is no champion indicator $X_i$ associated with it.  Interestingly when I initially set the same set of champions vs themselves, I expected that the resulting probability should have 50%, because it's essentially a mirror match and each team should have an equal probability of winning, but I got a probability greater than 50%.  I was puzzled at first then I realized that that there is a bias parameter associated within the logistic regression that is turned on by default.  $\beta_0$ is the bias towards the blue team winning. Since the game is not symmetrical in terms on player vision (blue team plays on bottom and red team plays on top), there is a natural (as in inherent in the game) tendency towards the blue team winning. 
 
+The coefficients for each champion seem to vary around  -1 to 1, so I thought about converting into a more natural scale, say from 0 to 100.  So I used the logistic function: 
+
+$$ f(x) = \frac{1}{1-exp(-\alpha x)} $$
