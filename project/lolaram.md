@@ -68,4 +68,6 @@ The coefficients for each champion seem to vary around  -1 to 1, so I thought ab
 
 $$ f(x) = \frac{1}{1-exp(-\alpha x)} $$
 
-which converts the range into $(-1,1)$.
+where $\alpha$ is controls the steepness of the curve.  This converts the range to $(0,1)$. Go check out the champion rankings on the site above. 
+
+Interstingly we see Teemo, Heimerdinger, and Nautilus on top and Sylas and Yuumi on the bottom of the tier list. 
