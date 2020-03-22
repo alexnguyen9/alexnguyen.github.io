@@ -86,12 +86,13 @@ Finally I was left with a list of ingredients which I converted the list to a si
 
 So our recipe from above will be converted to the following vector:
 
+$$
 \begin{array}{ | l | l | l | l | }
 \hline
 	chicken & salt & pepper & onion \\ \hline
 	0 & 1 & 0 & 1 \\ \hline
 \end{array}
-
+$$
 
 A problem I came across was with dealing with compound words and adjectives.  For example take: baking soda.  It's comprised of two words, "baking" and "soda" each on their own has different meanings.  The count vectorizer would separate the two words as two seprate ingredients which I didn't think was appropriate since I another recipe containing pop soda could match with the "soda" part in baking soda.  So for certain ingredients like "sesame oil" and "soy milk" I combined them into a single word to make sure we captured the meaning of the ingredient.  For ingredients like "white onion,"  some recipes just called it "onions" while others made the color distinction between onions, so I just left them as two separate words.
 
